@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:js='false' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' lang='tr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title><data:blog.pageTitle/></title>
+    
+    <script src='https://cdn.tailwindcss.com'/>
+    
+    <link href='https://fonts.googleapis.com' rel='preconnect'/>
+    <link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect'/>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap' rel='stylesheet'/>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js'/>
+
+    <style type='text/css'>
+    /* <![CDATA[ */
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
+        .instagram-gradient-text { background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover-effect { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover-effect:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1); }
+        .filter-btn.active { background-color: #4f46e5; color: white; }
+        .modal { transition: opacity 0.3s ease-in-out; }
+        .modal.is-hidden { opacity: 0; pointer-events: none; }
+        .goal-item.completed span { text-decoration: line-through; color: #6b7280; }
+        .gratitude-entry { border-left: 3px solid #f09433; }
+        #breathing-animator { transition: transform 4s ease-in-out; }
+        #decision-wheel { transition: transform 5s cubic-bezier(0.25, 1, 0.5, 1); }
+    /* ]]> */
+    </style>
+    
+    <b:skin><![CDATA[
+      /* Blogger'ın CSS için ihtiyaç duyduğu boş bölüm */
+    ]]></b:skin>
+</head>
+<body class='bg-black'>
+
+    <header class='fixed top-0 left-0 w-full bg-black/50 backdrop-blur-lg z-40 border-b border-gray-800'>
+        <div class='container mx-auto px-4 sm:px-6 lg:px-8'>
+            <div class='flex items-center justify-between h-16'>
+                <h1 class='text-xl font-bold tracking-tighter'><a class='instagram-gradient-text' href='#'>basariadresincom</a></h1>
+                <div class='flex items-center gap-2 sm:gap-3'>
+                    <a class='bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors' href='https://www.shopier.com/basariadresincom' target='_blank'>Dükkan</a>
+                    <a class='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors' href='https://www.instagram.com/basariadresincom' target='_blank'>Takip Et</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class='container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12'>
+        
+        <section class='mb-12'>
+            <div class='flex flex-col sm:flex-row items-center gap-6 sm:gap-10'>
+                <div class='w-28 h-28 sm:w-40 sm:h-40 p-1 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500'>
+                    <img alt='Başarı Adresin Profil Fotoğrafı' class='w-full h-full rounded-full object-cover border-4 border-black' src='https://i.imgur.com/v6mFFr8.jpeg'/>
+                </div>
+                <div class='text-center sm:text-left'>
+                    <h2 class='text-2xl sm:text-3xl font-bold'>basariadresincom</h2>
+                    <div class='flex items-center justify-center sm:justify-start gap-6 my-3 text-gray-300'>
+                        <div><span class='font-bold text-white'>77</span> gönderi</div>
+                        <div><span class='font-bold text-white'>94</span> takipçi</div>
+                        <div><span class='font-bold text-white'>0</span> takip</div>
+                    </div>
+                    <p class='text-gray-400 max-w-md'>Başarı | Eğitim | Motivasyon
+Dijital İçerik Üretici
+Hayatının en iyi yılı, bugün başlıyor. Potansiyelini keşfetmen için günlük ilham ve net adımlar. İlk adımı at 👇</p>
+                    <div class='mt-4'>
+                        <a class='inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg text-base transition-transform hover:scale-105 shadow-lg' href='https://www.shopier.com/basariadresincom' target='_blank'>&#10024; Dükkanı Ziyaret Et</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+             <div class='flex justify-center gap-2 mb-8 border-t border-gray-800 pt-8'>
+                <button class='filter-btn active bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold py-2 px-4 rounded-lg transition-colors' data-filter='all'>Tümü</button>
+                <button class='filter-btn bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold py-2 px-4 rounded-lg transition-colors' data-filter='motivasyon'>Motivasyon</button>
+                <button class='filter-btn bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold py-2 px-4 rounded-lg transition-colors' data-filter='arac'>Araçlar</button>
+            </div>
+
+            <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6' id='content-grid'>
+                <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-pink-400'>Karar Çarkı</h3><p class='text-gray-400 mt-2'>İkilemde mi kaldın? Bırak çark senin için karar versin. Basit evet/hayır soruları için ideal.</p></div>
+                    <button class='w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openDecisionSpinner'>Çarkı Çevir</button>
+                </div>
+                <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-amber-400'>Olumlama Kartları</h3><p class='text-gray-400 mt-2'>Gününe pozitif bir başlangıç yap. Rastgele bir olumlama kartı çekerek enerjini yükselt.</p></div>
+                    <button class='w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openAffirmationCards'>Kart Çek</button>
+                </div>
+                 <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-rose-400'>Endişe Kutusu</h3><p class='text-gray-400 mt-2'>Zihnini meşgul eden endişeleri yaz ve sembolik olarak uzaklaştır. Zihinsel bir rahatlama aracı.</p></div>
+                    <button class='w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openWorryBox'>Kutuyu Aç</button>
+                </div>
+                 <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-teal-400'>Günün Odağı</h3><p class='text-gray-400 mt-2'>Bugün tamamlaman gereken en önemli görevi belirle. Netlik kazan ve hedefine odaklan.</p></div>
+                    <button class='w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openDailyFocus'>Odağını Belirle</button>
+                </div>
+                 <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-lime-400'>Dijital Detoks</h3><p class='text-gray-400 mt-2'>Ekranlardan uzaklaşma zamanı. Kısa bir mola vererek zihnini ve gözlerini dinlendir.</p></div>
+                    <button class='w-full bg-lime-500 hover:bg-lime-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openDigitalDetox'>Mola Başlat</button>
+                </div>
+                <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-cyan-400'>Nefes Egzersizi</h3><p class='text-gray-400 mt-2'>Sakinleşmek ve odaklanmak için bir dakikanı ayır. Stresi azaltan basit bir nefes egzersizi.</p></div>
+                    <button class='w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openBreathingExercise'>Başla</button>
+                </div>
+                <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-orange-400'>Minnet Günlüğü</h3><p class='text-gray-400 mt-2'>Her güne pozitif başla. Minnettar olduğun şeyleri yazarak bakış açını değiştir.</p></div>
+                    <button class='w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openGratitudeJournal'>Günlüğünü Aç</button>
+                </div>
+                <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-green-400'>Pomodoro Tekniği</h3><p class='text-gray-400 mt-2'>25 dakika çalış, 5 dakika mola ver. Verimliliğini bu basit zamanlayıcı ile zirveye taşı.</p></div>
+                    <button class='w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openPomodoro'>Aracı Kullan</button>
+                </div>
+                <div class='aspect-square bg-zinc-900 rounded-xl p-6 flex flex-col justify-between card-hover-effect' data-category='arac'>
+                    <div><h3 class='text-2xl font-bold text-indigo-400'>Hedef Takipçisi</h3><p class='text-gray-400 mt-2'>Haftalık ve aylık hedeflerini belirle, ilerlemeni takip et ve motive kal.</p></div>
+                    <button class='w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors' id='openGoalTracker'>Hedeflerini Gir</button>
+                </div>
+
+                <div class='aspect-square bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 rounded-xl flex flex-col justify-center items-center p-6 text-center card-hover-effect' data-category='motivasyon'>
+                    <p class='text-2xl font-bold leading-tight shadow-lg'>&quot;Yapabileceğinize inanın, yolun yarısındasınız.&quot;</p><span class='mt-4 text-sm font-semibold opacity-80'>- Theodore Roosevelt</span>
+                </div>
+                 <div class='aspect-square bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 rounded-xl flex flex-col justify-center items-center p-6 text-center card-hover-effect' data-category='motivasyon'>
+                    <p class='text-2xl font-bold leading-tight shadow-lg'>&quot;Binlerce kilometrelik bir yolculuk tek bir adımla başlar.&quot;</p><span class='mt-4 text-sm font-semibold opacity-80'>- Lao Tzu</span>
+                </div>
+                 <div class='aspect-square bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 rounded-xl flex flex-col justify-center items-center p-6 text-center card-hover-effect' data-category='motivasyon'>
+                    <p class='text-2xl font-bold leading-tight shadow-lg'>&quot;Başarı, coşkunuzu kaybetmeden başarısızlıktan başarısızlığa gitmektir.&quot;</p><span class='mt-4 text-sm font-semibold opacity-80'>- Winston Churchill</span>
+                </div>
+                 <div class='aspect-square bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 rounded-xl flex flex-col justify-center items-center p-6 text-center card-hover-effect' data-category='motivasyon'>
+                    <p class='text-2xl font-bold leading-tight shadow-lg'>&quot;Geleceği tahmin etmenin en iyi yolu onu yaratmaktır.&quot;</p><span class='mt-4 text-sm font-semibold opacity-80'>- Peter Drucker</span>
+                </div>
+                <div class='aspect-square bg-gradient-to-br from-red-600 via-gray-800 to-black rounded-xl flex flex-col justify-center items-center p-6 text-center card-hover-effect' data-category='motivasyon'>
+                    <p class='text-2xl font-bold leading-tight shadow-lg'>&quot;Vazgeçenler asla kazanmaz, kazananlar asla vazgeçmez.&quot;</p><span class='mt-4 text-sm font-semibold opacity-80'>- Vince Lombardi</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class='text-center py-8 border-t border-gray-900 mt-8'><p class='text-gray-500 text-sm'>&#169; 2025 basariadresincom. Tüm hakları saklıdır.</p></footer>
+
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='decisionSpinnerModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-sm text-center border border-zinc-700 relative'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+            <h2 class='text-3xl font-bold text-pink-400 mb-4'>Karar Çarkı</h2>
+            <div class='relative w-64 h-64 mx-auto my-6'>
+                <canvas height='256' id='decision-wheel' width='256'/>
+                <div class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full w-0 h-0 border-x-8 border-x-transparent border-b-[16px] border-b-pink-400'/>
+            </div>
+            <button class='bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg transition-colors w-full' id='spin-wheel-btn'>Çevir!</button>
+            <p class='text-2xl font-semibold text-white h-8 mt-4' id='spinner-result'/>
+        </div>
+    </div>
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='affirmationCardsModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-md text-center border border-zinc-700 relative'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+            <h2 class='text-3xl font-bold text-amber-400 mb-6'>Günün Olumlaması</h2>
+            <div class='bg-gradient-to-br from-amber-500/20 to-zinc-900/10 p-8 rounded-lg min-h-[150px] flex items-center justify-center border border-amber-500/30' id='affirmation-card'>
+                <p class='text-2xl leading-relaxed' id='affirmation-text'/>
+            </div>
+            <button class='mt-6 w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-colors' id='new-affirmation-btn'>Yeni Olumlama</button>
+        </div>
+    </div>
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='worryBoxModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-md text-center border border-zinc-700 relative'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+            <h2 class='text-3xl font-bold text-rose-400 mb-6'>Endişe Kutusu</h2>
+            <textarea class='w-full h-40 bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-rose-500 resize-none mb-4 transition-opacity duration-500' id='worry-input' placeholder='Aklındaki endişeleri buraya yaz...'/>
+            <button class='w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-6 rounded-lg transition-colors' id='release-worry-btn'>Uzaklaştır</button>
+        </div>
+    </div>
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='dailyFocusModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-md text-center border border-zinc-700 relative'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+            <h2 class='text-3xl font-bold text-teal-400 mb-6'>Günün Odağı Nedir?</h2>
+            <p class='hidden text-2xl mb-4 p-4 bg-zinc-800 rounded-lg' id='saved-focus-display'/>
+            <div id='daily-focus-input-area'>
+                <input class='w-full bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-500' id='daily-focus-input' placeholder='Bugünkü en önemli görevin...' type='text'/>
+                <button class='mt-4 w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-colors' id='save-focus-btn'>Kaydet</button>
+            </div>
+             <button class='hidden mt-4 w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition-colors text-sm' id='clear-focus-btn'>Temizle</button>
+        </div>
+    </div>
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='digitalDetoxModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-sm text-center border border-zinc-700 relative'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+             <h2 class='text-3xl font-bold text-lime-400 mb-2' id='detox-timer-label'>Dijital Detoks</h2>
+            <p class='text-7xl font-mono font-bold my-6' id='detox-timer-display'>00:00</p>
+            <div class='flex justify-center gap-2 sm:gap-4 mb-4' id='detox-options'>
+                <button class='detox-time-btn bg-zinc-700 hover:bg-lime-500 text-white font-bold py-2 px-4 rounded-lg transition-colors' data-time='15'>15 dk</button>
+                <button class='detox-time-btn bg-zinc-700 hover:bg-lime-500 text-white font-bold py-2 px-4 rounded-lg transition-colors' data-time='30'>30 dk</button>
+                <button class='detox-time-btn bg-zinc-700 hover:bg-lime-500 text-white font-bold py-2 px-4 rounded-lg transition-colors' data-time='60'>60 dk</button>
+            </div>
+            <div class='hidden flex justify-center gap-4' id='detox-controls'>
+                <button class='bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors' id='detox-start-pause-btn'>Başlat</button>
+                <button class='bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-colors' id='detox-reset-btn'>Sıfırla</button>
+            </div>
+        </div>
+    </div>
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='pomodoroModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-sm text-center border border-zinc-700 relative'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+            <h2 class='text-3xl font-bold text-green-400 mb-2' id='timer-label'>Çalışma Zamanı</h2>
+            <p class='text-7xl font-mono font-bold my-6' id='timer-display'>25:00</p>
+            <div class='flex justify-center gap-4'>
+                <button class='bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors' id='start-pause-btn'>Başlat</button>
+                <button class='bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-colors' id='reset-btn'>Sıfırla</button>
+            </div>
+        </div>
+    </div>
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='goalTrackerModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-md text-center border border-zinc-700 relative'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+            <h2 class='text-3xl font-bold text-indigo-400 mb-6'>Hedef Takipçisi</h2>
+            <div class='flex gap-2 mb-4'>
+                <input class='flex-grow bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500' id='goalInput' placeholder='Yeni bir hedef ekle...' type='text'/>
+                <button class='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-5 rounded-lg transition-colors' id='addGoalBtn'>Ekle</button>
+            </div>
+            <ul class='text-left max-h-64 overflow-y-auto pr-2' id='goalList'/>
+        </div>
+    </div>
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='gratitudeModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-lg border border-zinc-700 relative flex flex-col md:flex-row gap-8' style='height: 70vh; max-height: 500px;'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+            <div class='flex-1 flex flex-col'>
+                <h2 class='text-3xl font-bold text-orange-400 mb-6 text-center md:text-left'>Bugün Neler İçin Minnettarsın?</h2>
+                <textarea class='flex-grow bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none mb-4' id='gratitudeInput' placeholder='Aklına gelenleri yaz...'/>
+                <button class='w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-5 rounded-lg transition-colors' id='saveGratitudeBtn'>Kaydet</button>
+            </div>
+            <div class='flex-1 flex flex-col'>
+                 <h3 class='text-xl font-bold text-gray-300 mb-4 text-center md:text-left border-b border-zinc-700 pb-2'>Önceki Girdiler</h3>
+                 <ul class='text-left overflow-y-auto space-y-4 pr-2 flex-grow' id='gratitudeList'/>
+            </div>
+        </div>
+    </div>
+    <div class='modal is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50' id='breathingModal'>
+        <div class='bg-zinc-900 rounded-2xl shadow-2xl p-8 w-11/12 max-w-sm text-center border border-zinc-700 relative'>
+            <button class='close-modal-btn absolute top-4 right-5 text-gray-500 hover:text-white text-2xl transition-colors'>&#215;</button>
+            <h2 class='text-3xl font-bold text-cyan-400 mb-4'>Sakinleş ve Odaklan</h2>
+            <div class='relative w-48 h-48 mx-auto my-6 flex items-center justify-center'>
+                <div class='absolute w-full h-full rounded-full bg-cyan-800 animate-pulse'/>
+                <div class='w-24 h-24 bg-cyan-400 rounded-full' id='breathing-animator'/>
+            </div>
+            <p class='text-2xl font-semibold text-white h-8 mb-4' id='breathing-text'>Başlamak için butona bas</p>
+            <button class='bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors w-full' id='start-breathing-btn'>Egzersizi Başlat</button>
+        </div>
+    </div>
+
+    <b:section id='main' showaddelement='false'/>
+
+    <script>
+    //<![CDATA[
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Genel Modal Yönetimi ---
+        const openModalButtons = {
+            'openDecisionSpinner': document.getElementById('decisionSpinnerModal'),
+            'openAffirmationCards': document.getElementById('affirmationCardsModal'),
+            'openWorryBox': document.getElementById('worryBoxModal'),
+            'openDailyFocus': document.getElementById('dailyFocusModal'),
+            'openDigitalDetox': document.getElementById('digitalDetoxModal'),
+            'openPomodoro': document.getElementById('pomodoroModal'),
+            'openGoalTracker': document.getElementById('goalTrackerModal'),
+            'openGratitudeJournal': document.getElementById('gratitudeModal'),
+            'openBreathingExercise': document.getElementById('breathingModal')
+        };
+        document.querySelectorAll('.close-modal-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const modal = e.target.closest('.modal');
+                modal.classList.add('is-hidden');
+                if (modal.id === 'breathingModal') stopBreathingExercise();
+                if (modal.id === 'digitalDetoxModal') resetDetoxTimer();
+                if (modal.id === 'pomodoroModal') resetTimer();
+            });
+        });
+        Object.keys(openModalButtons).forEach(btnId => {
+            const btn = document.getElementById(btnId);
+            if(btn) btn.addEventListener('click', () => {
+                openModalButtons[btnId].classList.remove('is-hidden');
+                if (btnId === 'openAffirmationCards') showNewAffirmation();
+                if (btnId === 'openDailyFocus') loadDailyFocus();
+                if (btnId === 'openDecisionSpinner') drawWheel();
+                if (btnId === 'openGoalTracker') renderGoals();
+                if (btnId === 'openGratitudeJournal') renderGratitude();
+            });
+        });
+
+        function playSound() { try { new Tone.Synth().toDestination().triggerAttackRelease("C5", "8n"); } catch (e) { console.error("Tone.js ses çalamadı.", e); } }
+
+        // --- İçerik Filtreleme ---
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const contentCards = document.querySelectorAll('#content-grid > div[data-category]');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+                contentCards.forEach(card => card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'flex' : 'none');
+            });
+        });
+
+        // --- Pomodoro Zamanlayıcı ---
+        const pomodoroModal = document.getElementById('pomodoroModal');
+        const timerLabel = document.getElementById('timer-label');
+        const timerDisplay = document.getElementById('timer-display');
+        const startPauseBtn = document.getElementById('start-pause-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        let minutes = 25, seconds = 0, isPaused = true, isWorkSession = true, timerInterval;
+
+        function updatePomodoroDisplay() { timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`; }
+        function startPauseTimer() {
+            if (isPaused) {
+                isPaused = false;
+                startPauseBtn.textContent = 'Durdur';
+                timerInterval = setInterval(() => {
+                    if (seconds === 0) {
+                        if (minutes === 0) { playSound(); switchSession(); } 
+                        else { minutes--; seconds = 59; }
+                    } else { seconds--; }
+                    updatePomodoroDisplay();
+                }, 1000);
+            } else {
+                isPaused = true;
+                startPauseBtn.textContent = 'Devam Et';
+                clearInterval(timerInterval);
+            }
+        }
+        function resetTimer() {
+            clearInterval(timerInterval);
+            isPaused = true;
+            startPauseBtn.textContent = 'Başlat';
+            startPauseBtn.disabled = false;
+            isWorkSession = true;
+            timerLabel.textContent = 'Çalışma Zamanı';
+            timerLabel.classList.remove('text-blue-400');
+            timerLabel.classList.add('text-green-400');
+            minutes = 25; seconds = 0;
+            updatePomodoroDisplay();
+        }
+        function switchSession() {
+            isWorkSession = !isWorkSession;
+            minutes = isWorkSession ? 25 : 5;
+            seconds = 0;
+            timerLabel.textContent = isWorkSession ? 'Çalışma Zamanı' : 'Mola Zamanı';
+            timerLabel.classList.toggle('text-green-400', isWorkSession);
+            timerLabel.classList.toggle('text-blue-400', !isWorkSession);
+            updatePomodoroDisplay();
+            isPaused = true; 
+            startPauseBtn.textContent = 'Başlat';
+            clearInterval(timerInterval);
+        }
+        startPauseBtn.addEventListener('click', startPauseTimer);
+        resetBtn.addEventListener('click', resetTimer);
+        updatePomodoroDisplay();
+
+        // --- Hedef Takipçisi (localStorage ile) ---
+        const goalInput = document.getElementById('goalInput');
+        const addGoalBtn = document.getElementById('addGoalBtn');
+        const goalList = document.getElementById('goalList');
+        let goals = JSON.parse(localStorage.getItem('basariAdresinGoals')) || [];
+        const renderGoals = () => {
+            goalList.innerHTML = '';
+            goals.forEach((goal, index) => {
+                const li = document.createElement('li');
+                li.className = `goal-item flex items-center justify-between bg-zinc-800 p-3 rounded-lg mb-2 transition-all ${goal.completed ? 'completed' : ''}`;
+                li.innerHTML = `<span class="cursor-pointer flex-grow" data-index="${index}">${goal.text}</span>
+                                <button class="delete-goal-btn text-gray-500 hover:text-red-500 transition-colors" data-index="${index}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                </button>`;
+                goalList.appendChild(li);
+            });
+        };
+        const saveGoals = () => localStorage.setItem('basariAdresinGoals', JSON.stringify(goals));
+        const addGoal = () => {
+            if (goalInput.value.trim() === '') return;
+            goals.push({ text: goalInput.value.trim(), completed: false });
+            goalInput.value = '';
+            saveGoals();
+            renderGoals();
+        };
+        addGoalBtn.addEventListener('click', addGoal);
+        goalInput.addEventListener('keypress', (e) => e.key === 'Enter' && addGoal());
+        goalList.addEventListener('click', (e) => {
+            const index = e.target.dataset.index;
+            if (e.target.tagName === 'SPAN') {
+                goals[index].completed = !goals[index].completed;
+            } else if (e.target.closest('.delete-goal-btn')) {
+                goals.splice(index, 1);
+            }
+            saveGoals();
+            renderGoals();
+        });
+
+        // --- Minnet Günlüğü (localStorage ile) ---
+        const gratitudeInput = document.getElementById('gratitudeInput');
+        const saveGratitudeBtn = document.getElementById('saveGratitudeBtn');
+        const gratitudeList = document.getElementById('gratitudeList');
+        let gratitudeEntries = JSON.parse(localStorage.getItem('basariAdresinGratitude')) || [];
+        const renderGratitude = () => {
+            gratitudeList.innerHTML = '';
+            gratitudeEntries.slice().reverse().forEach(entry => {
+                const li = document.createElement('li');
+                li.className = 'gratitude-entry bg-zinc-800/50 p-4 rounded-lg';
+                li.innerHTML = `<p class="text-sm text-gray-400 mb-2">${entry.date}</p>
+                                <p class="text-gray-200">${entry.text.replace(/\n/g, '<br>')}</p>`;
+                gratitudeList.appendChild(li);
+            });
+        };
+        const saveGratitude = () => {
+            if (gratitudeInput.value.trim() === '') return;
+            const now = new Date();
+            const dateString = now.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
+            gratitudeEntries.push({ text: gratitudeInput.value.trim(), date: dateString });
+            gratitudeInput.value = '';
+            localStorage.setItem('basariAdresinGratitude', JSON.stringify(gratitudeEntries));
+            renderGratitude();
+        };
+        saveGratitudeBtn.addEventListener('click', saveGratitude);
+
+        // --- Nefes Egzersizi ---
+        const breathingAnimator = document.getElementById('breathing-animator');
+        const breathingText = document.getElementById('breathing-text');
+        const startBreathingBtn = document.getElementById('start-breathing-btn');
+        let breathingInterval;
+        let breathingCycle = ['Nefes Al', 'Tut', 'Nefes Ver', 'Tut'];
+        let currentPhase = 0;
+        let isBreathing = false;
+        function runBreathingCycle() {
+            if (!isBreathing) return;
+            breathingText.textContent = breathingCycle[currentPhase];
+            switch(currentPhase) {
+                case 0: breathingAnimator.style.transform = 'scale(2)'; break;
+                case 2: breathingAnimator.style.transform = 'scale(1)'; break;
+            }
+            currentPhase = (currentPhase + 1) % 4;
+        }
+        function startBreathingExercise() {
+            if (isBreathing) return;
+            isBreathing = true;
+            startBreathingBtn.textContent = 'Devam Ediyor...';
+            startBreathingBtn.disabled = true;
+            runBreathingCycle();
+            breathingInterval = setInterval(runBreathingCycle, 4000);
+        }
+        function stopBreathingExercise() {
+            if (!isBreathing) return;
+            isBreathing = false;
+            clearInterval(breathingInterval);
+            breathingAnimator.style.transform = 'scale(1)';
+            breathingText.textContent = 'Başlamak için butona bas';
+            startBreathingBtn.textContent = 'Egzersizi Başlat';
+            startBreathingBtn.disabled = false;
+            currentPhase = 0;
+        }
+        startBreathingBtn.addEventListener('click', startBreathingExercise);
+
+        // --- Karar Çarkı ---
+        const wheelCanvas = document.getElementById('decision-wheel');
+        const spinBtn = document.getElementById('spin-wheel-btn');
+        const spinnerResult = document.getElementById('spinner-result');
+        const wheelOptions = ["EVET", "HAYIR"];
+        const colors = ["#ec4899", "#3f3f46"];
+        let currentRotation = 0;
+        const drawWheel = () => {
+            const ctx = wheelCanvas.getContext('2d');
+            const numOptions = wheelOptions.length;
+            const arcSize = (2 * Math.PI) / numOptions;
+            const centerX = wheelCanvas.width / 2, centerY = wheelCanvas.height / 2, radius = centerX - 5;
+            for (let i = 0; i < numOptions; i++) {
+                const angle = i * arcSize;
+                ctx.beginPath();
+                ctx.fillStyle = colors[i];
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, angle, angle + arcSize);
+                ctx.closePath();
+                ctx.fill();
+                ctx.save();
+                ctx.fillStyle = "white";
+                ctx.font = "bold 18px Inter";
+                ctx.translate(centerX + Math.cos(angle + arcSize / 2) * radius / 1.5, centerY + Math.sin(angle + arcSize / 2) * radius / 1.5);
+                ctx.rotate(angle + arcSize / 2 + Math.PI / 2);
+                ctx.textAlign = "center";
+                ctx.fillText(wheelOptions[i], 0, 0);
+                ctx.restore();
+            }
+        };
+        spinBtn.addEventListener('click', () => {
+            spinnerResult.textContent = '';
+            const randomSpins = Math.floor(Math.random() * 5) + 5;
+            const randomStopAngle = Math.random() * 360;
+            const totalRotation = (randomSpins * 360) + randomStopAngle;
+            currentRotation += totalRotation;
+            wheelCanvas.style.transform = `rotate(${currentRotation}deg)`;
+            spinBtn.disabled = true;
+            setTimeout(() => {
+                spinBtn.disabled = false;
+                const finalAngle = currentRotation % 360;
+                const winningSegment = Math.floor((360 - finalAngle) / (360 / wheelOptions.length)) % wheelOptions.length;
+                spinnerResult.textContent = `Sonuç: ${wheelOptions[winningSegment]}`;
+            }, 5000);
+        });
+
+        // --- Olumlama Kartları ---
+        const affirmationText = document.getElementById('affirmation-text');
+        const newAffirmationBtn = document.getElementById('new-affirmation-btn');
+        const affirmations = ["Başarıya giden yolda emin adımlarla yürüyorum.", "Her gün kendimin en iyi versiyonu oluyorum.", "Karşıma çıkan her zorluğun üstesinden gelebilirim.", "Yaratıcı ve pozitif enerjiyle doluyum.", "Kendime inanıyorum ve yeteneklerime güveniyorum.", "Hayallerimi gerçekleştirecek güce sahibim.", "Her deneyimden bir ders çıkarıyorum ve büyüyorum.", "Hayat bana harika fırsatlar sunuyor."];
+        function showNewAffirmation() { affirmationText.textContent = affirmations[Math.floor(Math.random() * affirmations.length)]; }
+        newAffirmationBtn.addEventListener('click', showNewAffirmation);
+
+        // --- Endişe Kutusu ---
+        const worryInput = document.getElementById('worry-input');
+        const releaseWorryBtn = document.getElementById('release-worry-btn');
+        releaseWorryBtn.addEventListener('click', () => {
+            if(worryInput.value.trim() === '') return;
+            worryInput.style.opacity = '0';
+            setTimeout(() => { worryInput.value = ''; worryInput.style.opacity = '1'; }, 500);
+        });
+
+        // --- Günün Odağı ---
+        const focusInput = document.getElementById('daily-focus-input');
+        const saveFocusBtn = document.getElementById('save-focus-btn');
+        const focusDisplay = document.getElementById('saved-focus-display');
+        const focusInputArea = document.getElementById('daily-focus-input-area');
+        const clearFocusBtn = document.getElementById('clear-focus-btn');
+        function loadDailyFocus() {
+            const savedFocus = localStorage.getItem('basariAdresinDailyFocus');
+            if (savedFocus) {
+                focusDisplay.textContent = savedFocus;
+                focusDisplay.classList.remove('hidden');
+                focusInputArea.classList.add('hidden');
+                clearFocusBtn.classList.remove('hidden');
+            } else {
+                focusDisplay.classList.add('hidden');
+                focusInputArea.classList.remove('hidden');
+                clearFocusBtn.classList.add('hidden');
+            }
+        }
+        saveFocusBtn.addEventListener('click', () => {
+            if (focusInput.value.trim() !== '') {
+                localStorage.setItem('basariAdresinDailyFocus', focusInput.value.trim());
+                focusInput.value = '';
+                loadDailyFocus();
+            }
+        });
+        clearFocusBtn.addEventListener('click', () => {
+            localStorage.removeItem('basariAdresinDailyFocus');
+            loadDailyFocus();
+        });
+
+        // --- Dijital Detoks ---
+        const detoxDisplay = document.getElementById('detox-timer-display');
+        const detoxOptions = document.getElementById('detox-options');
+        const detoxControls = document.getElementById('detox-controls');
+        const detoxStartPauseBtn = document.getElementById('detox-start-pause-btn');
+        const detoxResetBtn = document.getElementById('detox-reset-btn');
+        let detoxMinutes, detoxSeconds, detoxPaused = true, detoxInterval;
+
+        function updateDetoxDisplay() { detoxDisplay.textContent = `${String(detoxMinutes).padStart(2, '0')}:${String(detoxSeconds).padStart(2, '0')}`; }
+
+        document.querySelectorAll('.detox-time-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                detoxMinutes = parseInt(btn.dataset.time);
+                detoxSeconds = 0;
+                updateDetoxDisplay();
+                detoxOptions.classList.add('hidden');
+                detoxControls.classList.remove('hidden');
+            });
+        });
+        
+        function startPauseDetox() {
+            if (detoxPaused) {
+                detoxPaused = false;
+                detoxStartPauseBtn.textContent = 'Durdur';
+                detoxStartPauseBtn.disabled = false;
+                detoxInterval = setInterval(() => {
+                    if (detoxSeconds === 0) {
+                        if (detoxMinutes === 0) {
+                            playSound();
+                            clearInterval(detoxInterval);
+                            detoxStartPauseBtn.textContent = 'Bitti!';
+                            detoxStartPauseBtn.disabled = true;
+                        } else {
+                            detoxMinutes--;
+                            detoxSeconds = 59;
+                        }
+                    } else {
+                        detoxSeconds--;
+                    }
+                    updateDetoxDisplay();
+                }, 1000);
+            } else {
+                detoxPaused = true;
+                detoxStartPauseBtn.textContent = 'Devam Et';
+                clearInterval(detoxInterval);
+            }
+        }
+
+        function resetDetoxTimer() {
+            clearInterval(detoxInterval);
+            detoxPaused = true;
+            detoxMinutes = 0;
+            detoxSeconds = 0;
+            updateDetoxDisplay();
+            detoxControls.classList.add('hidden');
+            detoxOptions.classList.remove('hidden');
+            detoxStartPauseBtn.textContent = 'Başlat';
+            detoxStartPauseBtn.disabled = false;
+        }
+
+        detoxStartPauseBtn.addEventListener('click', startPauseDetox);
+        detoxResetBtn.addEventListener('click', resetDetoxTimer);
+    });
+    //]]>
+    </script>
+</body>
+</html>
